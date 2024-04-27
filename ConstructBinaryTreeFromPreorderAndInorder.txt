@@ -41,8 +41,7 @@ class Solution {
         int[] inorderLeft=Arrays.copyOfRange(inorder, 0, i);
         int[] inorderRight=Arrays.copyOfRange(inorder, i+1, inorder.length);
         int[] preorderLeft=Arrays.copyOfRange(preorder, 1, inorderLeft.length+1);
-        int[] preorderRight=Arrays.copyOfRange(preorder, i+1, preorder.length);
-        
+        int[] preorderRight=Arrays.copyOfRange(preorder, i+1, preorder.length);        
         root.left=buildTree(preorderLeft, inorderLeft);
         root.right=buildTree(preorderRight, inorderRight);      
         return root;
